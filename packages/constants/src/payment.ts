@@ -25,10 +25,10 @@ export const SUBSCRIPTION_WITH_BILLING_FREQUENCY = [
  * Mapping of product subscription types to their respective payment product details
  * Used to provide information about each product's pricing and features
  */
-export const PLANE_COMMUNITY_PRODUCTS: Record<string, IPaymentProduct> = {
+export const PICKET_COMMUNITY_PRODUCTS: Record<string, IPaymentProduct> = {
   [EProductSubscriptionEnum.PRO]: {
     id: EProductSubscriptionEnum.PRO,
-    name: "Plane Pro",
+    name: "Picket Pro",
     description:
       "More views, more cycles powers, more pages features, new reports, and better dashboards are waiting to be unlocked.",
     type: "PRO",
@@ -55,9 +55,9 @@ export const PLANE_COMMUNITY_PRODUCTS: Record<string, IPaymentProduct> = {
   },
   [EProductSubscriptionEnum.BUSINESS]: {
     id: EProductSubscriptionEnum.BUSINESS,
-    name: "Plane Business",
+    name: "Picket Business",
     description:
-      "The earliest packaging of Business at $10 a seat a month billed annually, $12 a seat a month billed monthly for Plane Cloud",
+      "The earliest packaging of Business at $10 a seat a month billed annually, $12 a seat a month billed monthly for Picket Cloud",
     type: "BUSINESS",
     prices: [
       {
@@ -82,7 +82,7 @@ export const PLANE_COMMUNITY_PRODUCTS: Record<string, IPaymentProduct> = {
   },
   [EProductSubscriptionEnum.ENTERPRISE]: {
     id: EProductSubscriptionEnum.ENTERPRISE,
-    name: "Plane Enterprise",
+    name: "Picket Enterprise",
     description: "",
     type: "ENTERPRISE",
     prices: [

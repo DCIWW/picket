@@ -13,14 +13,8 @@ import GithubLightLogo from "@/app/assets/logos/github-black.png?url";
 import GithubDarkLogo from "@/app/assets/logos/github-dark.svg?url";
 import GitlabLogo from "@/app/assets/logos/gitlab-logo.svg?url";
 import GoogleLogo from "@/app/assets/logos/google-logo.svg?url";
+import OIDCLogo from "/public/logos/oidc-logo.svg";
 // helpers
-import type { TAuthErrorInfo } from "@/helpers/authentication.helper";
-import { EErrorAlertType, authErrorHandler, EAuthenticationErrorCodes } from "@/helpers/authentication.helper";
-// hooks
-import { useInstance } from "@/hooks/store/use-instance";
-// types
-import { EAuthModes, EAuthSteps } from "@/types/auth";
-// local imports
 import { TermsAndConditions } from "../terms-and-conditions";
 import { AuthBanner } from "./auth-banner";
 import { AuthHeader } from "./auth-header";
@@ -92,7 +86,8 @@ export const AuthRoot = observer(function AuthRoot() {
       (config?.is_google_enabled ||
         config?.is_github_enabled ||
         config?.is_gitlab_enabled ||
-        config?.is_gitea_enabled)) ||
+        config?.is_gitea_enabled ||
+        config?.is_oidc_enabled)) ||
     false;
 
   // submit handler- email verification
@@ -198,6 +193,15 @@ export const AuthRoot = observer(function AuthRoot() {
         window.location.assign(`${API_BASE_URL}/auth/gitea/${next_path ? `?next_path=${next_path}` : ``}`);
       },
       enabled: config?.is_gitea_enabled,
+    },
+    {
+      id: "oidc",
+      text: `${content} with SSO`,
+      icon: <img src={OIDCLogo} height={18} width={18} alt="OIDC Logo" />,
+      onClick: () => {
+        window.location.assign(`${API_BASE_URL}/auth/spaces/oidc/${next_path ? `?next_path=${next_path}` : ``}`);
+      },
+      enabled: config?.is_oidc_enabled,
     },
   ];
 

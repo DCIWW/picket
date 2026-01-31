@@ -21,7 +21,7 @@ export function PoweredBy(props: TPoweredBy) {
     >
       <PlaneLogo className="h-3 w-auto text-custom-text-100" />
       <div className="text-xs">
-        Powered by <span className="font-semibold">Plane Publish</span>
+        Powered by <span className="font-semibold">Picket Publish</span>
       </div>
     </a>
   );

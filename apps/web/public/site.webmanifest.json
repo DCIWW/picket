@@ -1,7 +1,7 @@
 {
-  "name": "Plane",
-  "short_name": "Plane",
-  "description": "Plane helps you plan your issues, cycles, and product modules.",
+  "name": "Picket",
+  "short_name": "Picket",
+  "description": "Picket helps you plan your issues, cycles, and product modules with SSO/OIDC authentication support.",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#f9fafb",

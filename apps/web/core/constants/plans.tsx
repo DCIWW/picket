@@ -39,7 +39,7 @@ type TPlansComparisonDetails = {
   features: TPlanFeatureDetails[];
 };
 
-type PlanePlans = {
+type PicketPlans = {
   planDetails: Record<TPlanePlans, TPlanDetail>;
   planHighlights: Record<TPlanePlans, string[]>;
   planComparison: TPlansComparisonDetails[];
@@ -1249,7 +1249,7 @@ export const PLANS_COMPARISON_LIST: TPlansComparisonDetails[] = [
   },
 ];
 
-export const PLANE_PLANS: PlanePlans = {
+export const PICKET_PLANS: PicketPlans = {
   planDetails: {
     free: {
       id: EProductSubscriptionEnum.FREE,
